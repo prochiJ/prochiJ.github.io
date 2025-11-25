@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "subtitle": "My Work",
+    "heading": "Projects that blend systems thinking with user empathy",
+    "lead": "From embedded telemetry to full-stack platforms, each project reflects a commitment to craft, collaboration, and outcomes that matter."
+  },
+  "cta": {
+    "subtitle": "Bring your idea to life",
+    "heading": "Looking for an engineer who cares about outcomes and craft?",
+    "description": "Let's co-design a roadmap, co-create experiments, and deliver products your users remember. Happy to plug into existing teams or stand up new initiatives.",
+    "buttons": [
+      {
+        "text": "Start a project conversation",
+        "link": "mailto:prachi.jindal9561@gmail.com",
+        "primary": true
+      },
+      {
+        "text": "Explore my latest thinking",
+        "link": "blogs/",
+        "primary": false
+      }
+    ]
+  }
+}

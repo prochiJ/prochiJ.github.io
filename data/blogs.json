@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ml-getting-started",
+    "title": "Getting Started with Machine Learning",
+    "description": "A practical primer on navigating tooling, first principles, and learning roadmaps without the burnout.",
+    "date": "November 15, 2025",
+    "readTime": "8 min",
+    "tags": [
+      "Machine Learning",
+      "Career",
+      "Learning"
+    ],
+    "link": "blogs/blog1/",
+    "featured": false
+  },
+  {
+    "id": "embedded-theory-practice",
+    "title": "Embedded Systems: From Theory to Practice",
+    "description": "A practical guide on translating academic rigor into production-ready embedded systems. Includes lessons from internship experience, debugging workflows, and resource checklists.",
+    "excerpt": "Lessons from translating classroom rigor into robust industrial solutions across microcontrollers and RTOSes.",
+    "date": "November 10, 2025",
+    "readTime": "12 min",
+    "tags": [
+      "Embedded C",
+      "RTOS",
+      "Team Playbooks"
+    ],
+    "link": "blogs/blog2/",
+    "featured": true,
+    "note": "Updated quarterly with new insights"
+  },
+  {
+    "id": "nextjs-apps",
+    "title": "Building Web Applications with Next.js",
+    "description": "A full-stack checklist for crafting performant, maintainable, and inclusive web apps using the Next.js ecosystem.",
+    "date": "November 5, 2025",
+    "readTime": "10 min",
+    "tags": [
+      "Next.js",
+      "Web Development",
+      "Full-stack"
+    ],
+    "link": "blogs/blog3/",
+    "featured": false
+  }
+]

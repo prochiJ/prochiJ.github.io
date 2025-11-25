@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Machine Learning | Prachi Jindal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../" class="text-accent font-bold text-2xl font-mono">PJ</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../about/" class="nav-link"><span class="text-accent font-mono">01.</span> About</a>
+                <a href="../../projects/" class="nav-link"><span class="text-accent font-mono">02.</span> Projects</a>
+                <a href="../" class="nav-link"><span class="text-accent font-mono">03.</span> Blogs</a>
+                <a href="../../contact/" class="nav-link"><span class="text-accent font-mono">04.</span> Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-accent focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary-dark">
+            <div class="flex flex-col items-center space-y-6 py-8">
+                <a href="../../about/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">01.</span>
+                    About</a>
+                <a href="../../projects/" class="nav-link mobile-nav-link"><span
+                        class="text-accent font-mono">02.</span> Projects</a>
+                <a href="../" class="nav-link mobile-nav-link"><span class="text-accent font-mono">03.</span> Blogs</a>
+                <a href="../../contact/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">04.</span>
+                    Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-16 lg:px-24 pt-24">
+
+        <!-- Blog Post -->
+        <article class="py-24 fade-in-section">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Getting Started with Machine Learning</h1>
+            <p class="text-accent font-mono mb-8">Published on November 15, 2025</p>
+
+            <div class="prose prose-lg max-w-none text-slate-300">
+                <p class="mb-6">Machine learning has become one of the most transformative technologies of our time.
+                    From recommendation systems to autonomous vehicles, ML algorithms are powering innovations across
+                    industries. If you're new to this field, getting started can feel overwhelming, but with the right
+                    approach, you can build a solid foundation.</p>
+
+                <h2 class="text-2xl font-bold text-gray-100 mt-8 mb-4">What is Machine Learning?</h2>
+                <p class="mb-6">Machine learning is a subset of artificial intelligence that enables computers to learn
+                    and improve from experience without being explicitly programmed. Instead of writing code for every
+                    possible scenario, we provide algorithms with data and let them discover patterns and make
+                    predictions.</p>
+
+                <h2 class="text-2xl font-bold text-gray-100 mt-8 mb-4">Essential Tools and Languages</h2>
+                <ul class="list-disc list-inside mb-6 space-y-2">
+                    <li><strong>Python:</strong> The go-to language for ML due to its simplicity and extensive libraries
+                    </li>
+                    <li><strong>Jupyter Notebook:</strong> Interactive environment for experimentation and visualization
+                    </li>
+                    <li><strong>Scikit-learn:</strong> Comprehensive library for classical ML algorithms</li>
+                    <li><strong>TensorFlow/PyTorch:</strong> Frameworks for deep learning applications</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-100 mt-8 mb-4">First Steps</h2>
+                <p class="mb-6">Start with understanding the basics: supervised vs unsupervised learning, regression vs
+                    classification, and common algorithms like linear regression, decision trees, and k-means
+                    clustering. Practice with small datasets and gradually work your way up to more complex problems.
+                </p>
+
+                <p class="mb-6">Remember, the key to success in machine learning is consistent practice and curiosity.
+                    Don't be afraid to experiment and learn from failures. The field is constantly evolving, so staying
+                    updated with the latest research and techniques is crucial.</p>
+            </div>
+
+            <div class="mt-12">
+                <a href="../" class="btn">← Back to Blogs</a>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center">
+        <div class="flex justify-center space-x-6 mb-4 text-xl">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="nav-link"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="nav-link"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:prachi.jindal9561@gmail.com" class="nav-link"><i class="far fa-envelope"></i></a>
+        </div>
+        <p class="font-mono text-xs">&copy; 2025 Prachi Jindal. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="to-top-button" title="Go To Top"
+        class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full shadow-md bg-accent text-white text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-accent-darker focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

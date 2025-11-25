@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Jindal | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Prachi Jindal – software engineer focused on web experiences, embedded systems, and machine intelligence.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/content-loader.js"></script>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-accent font-bold text-2xl font-mono">PJ</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="about/" class="nav-link"><span class="text-accent font-mono">01.</span> About</a>
+                <a href="projects/" class="nav-link"><span class="text-accent font-mono">02.</span> Projects</a>
+                <a href="blogs/" class="nav-link"><span class="text-accent font-mono">03.</span> Blogs</a>
+                <a href="contact/" class="nav-link"><span class="text-accent font-mono">04.</span> Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-accent focus:outline-none" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a192f] border-t border-accent/30 shadow-lg">
+            <div class="flex flex-col items-center space-y-6 py-8">
+                <a href="about/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">01.</span>
+                    About</a>
+                <a href="projects/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">02.</span>
+                    Projects</a>
+                <a href="blogs/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">03.</span>
+                    Blogs</a>
+                <a href="contact/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">04.</span>
+                    Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-16 lg:px-24 pt-32 pb-24 space-y-32">
+
+        <!-- Hero Section -->
+        <section id="hero" class="grid gap-16 lg:grid-cols-[2fr,1fr] items-center">
+            <!-- Hero content loaded from data/home.json -->
+        </section>
+
+        <!-- Highlights Section -->
+        <section aria-labelledby="highlights-heading" class="space-y-10 fade-in-section">
+            <div>
+                <!-- Highlights header loaded from data/home.json -->
+            </div>
+            <div class="grid gap-6 md:grid-cols-3">
+                <!-- Stats loaded from data/stats.json -->
+            </div>
+        </section>
+
+        <div class="divider" role="presentation"></div>
+
+        <!-- Featured Projects -->
+        <section aria-labelledby="projects-heading" class="space-y-10 fade-in-section">
+            <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                <div>
+                    <!-- Projects header loaded from data/home.json -->
+                </div>
+                <a href="projects/" class="btn"><!-- CTA loaded from data/home.json --></a>
+            </div>
+            <div class="grid gap-8 lg:grid-cols-3" id="featured-projects">
+                <!-- Projects loaded dynamically from data/projects.json -->
+            </div>
+        </section>
+
+        <!-- Experience Preview -->
+        <section aria-labelledby="experience-heading" class="space-y-10 fade-in-section">
+            <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                <div>
+                    <!-- Experience header loaded from data/home.json -->
+                </div>
+                <a href="about/" class="btn"><!-- CTA loaded from data/home.json --></a>
+            </div>
+            <div class="grid gap-6 lg:grid-cols-2" id="experience-preview">
+                <!-- Experience loaded dynamically from data/experience.json -->
+            </div>
+        </section>
+
+        <!-- Latest Writing -->
+        <section aria-labelledby="writing-heading" class="space-y-10 fade-in-section">
+            <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                <div>
+                    <!-- Blogs header loaded from data/home.json -->
+                </div>
+                <a href="blogs/" class="btn"><!-- CTA loaded from data/home.json --></a>
+            </div>
+            <div class="grid gap-6 md:grid-cols-3" id="latest-blogs">
+                <!-- Blogs loaded dynamically from data/blogs.json -->
+            </div>
+        </section>
+
+        <div class="divider" role="presentation"></div>
+
+        <!-- Call To Action -->
+        <section aria-labelledby="cta-heading" class="fade-in-section">
+            <div class="card flex flex-col gap-6 items-start md:flex-row md:items-center md:justify-between">
+                <!-- CTA content loaded from data/home.json -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer loaded from data/footer.json -->
+    <footer class="py-12 border-t border-gray-800">
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="to-top-button" title="Go To Top"
+        class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full shadow-md bg-accent text-white text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-accent-darker focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

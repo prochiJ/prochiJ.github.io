@@ -1,0 +1,54 @@
+[
+  {
+    "id": "literary-loans",
+    "title": "Literary Loans – Book Exchange Platform",
+    "description": "Designed a community-driven platform connecting bibliophiles through intelligent matching, availability forecasting, and streamlined logistics.",
+    "image": "https://via.placeholder.com/640x420?text=Literary+Loans",
+    "tags": [
+      "Next.js",
+      "Python",
+      "MySQL"
+    ],
+    "link": "projects/",
+    "featured": true
+  },
+  {
+    "id": "text-to-sql",
+    "title": "FLAN-T5 + LoRA Text-to-SQL Platform",
+    "description": "Orchestrated a resilient natural language to SQL pipeline with guardrails, adaptive fine-tuning, and comprehensive evaluation workflows.",
+    "image": "https://i.imghippo.com/files/Pwz5897GJk.png",
+    "tags": [
+      "FLAN-T5",
+      "LoRA",
+      "MLOps"
+    ],
+    "link": "projects/",
+    "featured": true
+  },
+  {
+    "id": "automation",
+    "title": "Embedded Automation for Semiconductor QA",
+    "description": "Built intelligent automation units that streamlined validation cycles, reduced manual effort, and increased coverage for device package variants.",
+    "image": "https://via.placeholder.com/640x420?text=Automation",
+    "tags": [
+      "Embedded C",
+      "Python",
+      "Automation"
+    ],
+    "link": "projects/",
+    "featured": true
+  },
+  {
+    "id": "automation",
+    "title": "Embedded Automation for Semiconductor QA",
+    "description": "Built intelligent automation units that streamlined validation cycles, reduced manual effort, and increased coverage for device package variants.",
+    "image": "https://via.placeholder.com/640x420?text=Automation",
+    "tags": [
+      "Embedded C",
+      "Python",
+      "Automation"
+    ],
+    "link": "projects/",
+    "featured": true
+  }
+]

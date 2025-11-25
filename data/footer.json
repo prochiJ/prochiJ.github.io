@@ -1,0 +1,71 @@
+{
+  "brand": {
+    "logo": "PJ",
+    "logoLink": "./",
+    "tagline": "Designing thoughtful engineering journeys that balance technical depth with user empathy. Based in New Delhi, partnering worldwide."
+  },
+  "navigate": {
+    "heading": "Navigate",
+    "links": [
+      {
+        "text": "About",
+        "url": "about/"
+      },
+      {
+        "text": "Projects",
+        "url": "projects/"
+      },
+      {
+        "text": "Blogs",
+        "url": "blogs/"
+      },
+      {
+        "text": "Contact",
+        "url": "contact/"
+      }
+    ]
+  },
+  "connect": {
+    "heading": "Connect",
+    "links": [
+      {
+        "text": "Email",
+        "url": "mailto:prachi.jindal9561@gmail.com",
+        "external": false
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://linkedin.com/in/prachi-jindal-178075260/",
+        "external": true
+      },
+      {
+        "text": "GitHub",
+        "url": "https://github.com/yourusername",
+        "external": true
+      },
+      {
+        "text": "Schedule time",
+        "url": "contact/",
+        "external": false
+      }
+    ]
+  },
+  "themes": {
+    "heading": "UI Themes",
+    "links": [
+      {
+        "text": "Standard",
+        "url": "./"
+      },
+      {
+        "text": "Crazy",
+        "url": "crazy/"
+      },
+      {
+        "text": "Minimal",
+        "url": "minimal/"
+      }
+    ]
+  },
+  "copyright": "© 2025 Prachi Jindal. Crafted with intention and caffeine."
+}

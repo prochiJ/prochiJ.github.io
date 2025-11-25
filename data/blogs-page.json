@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "subtitle": "Writing & insights",
+    "heading": "Notes on engineering craft, systems thinking, and learning out loud.",
+    "lead": "I write to document experiments, celebrate wins, and share practical frameworks. Expect a mix of deep dives, how-to guides, and reflections from the intersection of embedded systems, data, and product leadership.",
+    "badges": [
+      {
+        "icon": "fas fa-microchip",
+        "label": "Embedded"
+      },
+      {
+        "icon": "fas fa-brain",
+        "label": "Machine Learning"
+      },
+      {
+        "icon": "fas fa-people-carry",
+        "label": "Team Craft"
+      },
+      {
+        "icon": "fas fa-pen-nib",
+        "label": "Playbooks"
+      }
+    ]
+  },
+  "latestSection": {
+    "subtitle": "Latest posts",
+    "heading": "Fresh perspectives across the stack",
+    "ctaText": "Request a private briefing →",
+    "ctaLink": "../contact.html"
+  },
+  "topics": {
+    "subtitle": "Topics & series",
+    "items": [
+      {
+        "title": "Edge Intelligence:",
+        "description": "Deploying ML on constrained devices, telemetry, and ethics."
+      },
+      {
+        "title": "Human-centered Engineering:",
+        "description": "Bridging design, accessibility, and systems thinking."
+      },
+      {
+        "title": "Learning Playbook:",
+        "description": "Study techniques, lab resources, and mentorship stories."
+      },
+      {
+        "title": "Build Diaries:",
+        "description": "Behind-the-scenes of ongoing experiments and prototypes."
+      }
+    ]
+  },
+  "newsletter": {
+    "subtitle": "Stay in the loop",
+    "heading": "Quarterly digest curated with love and signal.",
+    "description": "No spam—just thoughtful updates on new articles, resources, and events. Perfect for teammates or mentees looking to grow alongside me.",
+    "placeholder": "you@email.com",
+    "buttonText": "Join list",
+    "disclaimer": "You can unsubscribe anytime. I'll never share your contact."
+  },
+  "cta": {
+    "subtitle": "Share your story",
+    "heading": "Have an idea worth writing about together?",
+    "description": "I love co-authoring with teams and highlighting impactful work. Reach out with your concept, and let's craft something memorable.",
+    "buttons": [
+      {
+        "text": "Pitch a collaboration",
+        "link": "../contact.html",
+        "primary": true
+      },
+      {
+        "text": "Explore related projects",
+        "link": "../projects.html",
+        "primary": false
+      }
+    ]
+  }
+}

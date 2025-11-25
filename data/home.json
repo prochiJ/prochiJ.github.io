@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "subtitle": "Prachi Jindal",
+    "heading": "Building reliable, human-centered digital and embedded products.",
+    "lead": "I'm an Electrical Engineering student at IIT Delhi and software engineer focused on marrying embedded intelligence with intuitive web experiences. From prototyping machine learning workflows to shipping full-stack products, I craft resilient systems that feel effortless to use.",
+    "image": "images/profileimage.png",
+    "imageAlt": "Prachi Jindal",
+    "imageCaption": "Software Engineer joining Stripe in 2026. Building reliable, user-centered products.",
+    "buttons": [
+      {
+        "text": "Explore Featured Projects",
+        "link": "projects/",
+        "primary": true
+      },
+      {
+        "text": "Start a Conversation",
+        "link": "contact/",
+        "primary": false
+      }
+    ],
+    "chips": [
+      {
+        "icon": "fas fa-microchip",
+        "label": "Embedded ML"
+      },
+      {
+        "icon": "fas fa-laptop-code",
+        "label": "Full-stack"
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "label": "Data-driven"
+      },
+      {
+        "icon": "fas fa-users",
+        "label": "Team-first"
+      }
+    ]
+  },
+  "highlights": {
+    "subtitle": "Impact At A Glance",
+    "heading": "Delivering measurable value across domains",
+    "description": "I thrive on solving hard technical problems, scaling product teams, and turning ambiguous ideas into resilient, user-loved solutions."
+  },
+  "projects": {
+    "subtitle": "Featured Projects",
+    "heading": "Recent work and explorations",
+    "description": "A curated selection of projects bridging hardware, intelligence, and delightful interfaces.",
+    "ctaText": "View all projects",
+    "ctaLink": "projects/"
+  },
+  "blogs": {
+    "subtitle": "Latest Thinking",
+    "heading": "Articles and deep dives",
+    "description": "Lessons learned, architectural reflections, and opinionated how-tos distilled from real-world building.",
+    "ctaText": "Read all blog posts →",
+    "ctaLink": "blogs/"
+  },
+  "experience": {
+    "subtitle": "Professional Journey",
+    "heading": "Where I've contributed and what I've learned",
+    "description": "From semiconductor labs to full-stack teams, here's a snapshot of the roles shaping my craft.",
+    "ctaText": "View full experience →",
+    "ctaLink": "about/"
+  },
+  "cta": {
+    "subtitle": "Open For Collaboration",
+    "heading": "Let's build something that moves the needle",
+    "description": "Whether you need an embedded ML prototype, a data-driven automation pipeline, or a crafted digital product, I bring curiosity, care, and bias for action to every engagement.",
+    "buttons": [
+      {
+        "text": "Schedule a discovery call",
+        "link": "mailto:prachi.jindal9561@gmail.com",
+        "primary": true
+      },
+      {
+        "text": "Share your project brief",
+        "link": "contact/",
+        "primary": false
+      }
+    ]
+  }
+}

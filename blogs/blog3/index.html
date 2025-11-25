@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Web Applications with Next.js | Prachi Jindal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../" class="text-accent font-bold text-2xl font-mono">PJ</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../about/" class="nav-link"><span class="text-accent font-mono">01.</span> About</a>
+                <a href="../../projects/" class="nav-link"><span class="text-accent font-mono">02.</span> Projects</a>
+                <a href="../" class="nav-link"><span class="text-accent font-mono">03.</span> Blogs</a>
+                <a href="../../contact/" class="nav-link"><span class="text-accent font-mono">04.</span> Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-accent focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary-dark">
+            <div class="flex flex-col items-center space-y-6 py-8">
+                <a href="../../about/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">01.</span>
+                    About</a>
+                <a href="../../projects/" class="nav-link mobile-nav-link"><span
+                        class="text-accent font-mono">02.</span> Projects</a>
+                <a href="../" class="nav-link mobile-nav-link"><span class="text-accent font-mono">03.</span> Blogs</a>
+                <a href="../../contact/" class="nav-link mobile-nav-link"><span class="text-accent font-mono">04.</span>
+                    Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-16 lg:px-24 pt-24">
+
+        <!-- Blog Post -->
+        <article class="py-24 fade-in-section">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Building Web Applications with Next.js</h1>
+            <p class="text-accent font-mono mb-8">Published on November 5, 2025</p>
+
+            <div class="prose prose-lg max-w-none text-slate-300">
+                <p class="mb-6">Next.js has revolutionized the way we build React applications. As a full-stack
+                    framework built on top of React, it provides powerful features that make development faster and more
+                    efficient. In this guide, I'll walk you through the key concepts and best practices for building
+                    modern web applications with Next.js.</p>
+
+                <h2 class="text-2xl font-bold text-gray-100 mt-8 mb-4">Why Next.js?</h2>
+                <p class="mb-6">Next.js offers several advantages over plain React:</p>
+                <ul class="list-disc list-inside mb-6 space-y-2">
+                    <li><strong>Server-Side Rendering (SSR):</strong> Better SEO and initial load performance</li>
+                    <li><strong>Static Site Generation (SSG):</strong> Pre-built pages for lightning-fast loading</li>
+                    <li><strong>API Routes:</strong> Build backend functionality without a separate server</li>
+                    <li><strong>File-based Routing:</strong> Intuitive page structure based on file system</li>
+                    <li><strong>Built-in Optimization:</strong> Automatic code splitting and image optimization</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-100 mt-8 mb-4">Getting Started</h2>
+                <p class="mb-6">Creating a new Next.js project is straightforward:</p>
+                <pre class="bg-secondary-dark p-4 rounded-md mb-6 overflow-x-auto"><code class="text-accent font-mono text-sm">npx create-next-app@latest my-app
+cd my-app
+npm run dev</code></pre>
+
+                <h2 class="text-2xl font-bold text-gray-100 mt-8 mb-4">Key Concepts</h2>
+                <p class="mb-6">Understanding these core concepts will help you build better applications:</p>
+                <ul class="list-disc list-inside mb-6 space-y-2">
+                    <li><strong>Pages and Routing:</strong> File-based routing system</li>
+                    <li><strong>Data Fetching:</strong> getServerSideProps, getStaticProps, and getStaticPaths</li>
+                    <li><strong>API Routes:</strong> Serverless functions for backend logic</li>
+                    <li><strong>Styling:</strong> CSS Modules, styled-jsx, or CSS-in-JS libraries</li>
+                    <li><strong>Deployment:</strong> Vercel integration for seamless deployment</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-100 mt-8 mb-4">Best Practices</h2>
+                <p class="mb-6">Here are some tips for building scalable Next.js applications:</p>
+                <ul class="list-disc list-inside mb-6 space-y-2">
+                    <li>Use TypeScript for better development experience</li>
+                    <li>Implement proper error handling and loading states</li>
+                    <li>Optimize images and fonts for performance</li>
+                    <li>Use environment variables for configuration</li>
+                    <li>Implement proper SEO with meta tags and structured data</li>
+                </ul>
+
+                <p class="mb-6">Next.js continues to evolve rapidly, with new features being added regularly. Whether
+                    you're building a personal blog, an e-commerce site, or a complex web application, Next.js provides
+                    the tools and flexibility you need to succeed.</p>
+            </div>
+
+            <div class="mt-12">
+                <a href="../" class="btn">← Back to Blogs</a>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center">
+        <div class="flex justify-center space-x-6 mb-4 text-xl">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="nav-link"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="nav-link"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:prachi.jindal9561@gmail.com" class="nav-link"><i class="far fa-envelope"></i></a>
+        </div>
+        <p class="font-mono text-xs">&copy; 2025 Prachi Jindal. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="to-top-button" title="Go To Top"
+        class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full shadow-md bg-accent text-white text-lg font-semibold transition-all duration-300 ease-in-out hover:bg-accent-darker focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

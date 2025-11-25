@@ -1,0 +1,22 @@
+{
+  "name": "Prachi Jindal",
+  "tagline": "Building reliable, human-centered digital products.",
+  "bio": "I'm an Electrical Engineering student at IIT Delhi and incoming Software Engineer at Stripe. I focus on building robust and intelligent systems. From prototyping machine learning workflows to shipping production-ready software, I craft resilient systems that feel effortless to use.",
+  "email": "prachi.jindal9561@gmail.com",
+  "nextRole": {
+    "title": "Software Engineer",
+    "company": "Stripe",
+    "startDate": "May 2026",
+    "status": "Starting in 6 months"
+  },
+  "skills": [
+    {"icon": "fas fa-laptop-code", "label": "Software Engineering"},
+    {"icon": "fas fa-chart-line", "label": "Data-driven"},
+    {"icon": "fas fa-users", "label": "Team-first"}
+  ],
+  "social": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/prachi-jindal-178075260/"
+  }
+
+}

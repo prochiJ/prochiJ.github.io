@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "subtitle": "Let's connect",
+    "heading": "Get in touch",
+    "lead": "Whether you want to discuss a project, share an idea, or just say hi, I'd love to hear from you."
+  },
+  "contactCards": [
+    {
+      "icon": "fas fa-envelope",
+      "title": "Email",
+      "displayText": "prachi.jindal9561@gmail.com",
+      "link": "mailto:prachi.jindal9561@gmail.com"
+    },
+    {
+      "icon": "fab fa-linkedin",
+      "title": "LinkedIn",
+      "displayText": "Connect on LinkedIn",
+      "link": "https://linkedin.com/in/prachi-jindal-178075260/",
+      "external": true
+    },
+    {
+      "icon": "fab fa-github",
+      "title": "GitHub",
+      "displayText": "Follow on GitHub",
+      "link": "https://github.com/yourusername",
+      "external": true
+    }
+  ],
+  "quickNote": {
+    "heading": "Quick note",
+    "message": "I'm currently preparing to join <span class=\"text-accent font-semibold\">Stripe</span> as a Software Engineer in <span class=\"text-accent font-semibold\">May 2026</span>. Feel free to reach out for collaborations, questions, or just to connect!",
+    "buttonText": "Send me an email",
+    "buttonLink": "mailto:prachi.jindal9561@gmail.com"
+  }
+}

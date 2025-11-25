@@ -1,0 +1,259 @@
+/* Custom styles for the portfolio */
+:root {
+    --bg-color: #0a192f;
+    --primary-dark: #00405d;
+    --secondary-dark: #112240;
+    --text-light: #ccd6f6;
+    --text-slate: #8892b0;
+    --accent-color: #64ffda;
+    --accent-color-darker: #00c7a3;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-slate);
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.font-mono {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.bg-accent {
+    background-color: var(--accent-color);
+}
+
+.border-accent {
+    border-color: var(--accent-color);
+}
+
+.btn {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.section-heading::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin-left: 1rem;
+    background-color: #374151;
+}
+
+.nav-link {
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.header-scrolled {
+    background-color: rgba(10, 25, 47, 0.9);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-card, .experience-card, .blog-card {
+    background-color: var(--secondary-dark);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover, .experience-card:hover, .blog-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.5rem);
+}
+
+.skill-tag {
+    background-color: var(--primary-dark);
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    font-family: 'Roboto Mono', monospace;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+/* Scroll animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--text-slate);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-darker);
+    color: var(--bg-color);
+}
+
+.btn-ghost {
+    color: var(--text-light);
+    border-color: transparent;
+}
+
+.btn-ghost:hover {
+    color: var(--accent-color);
+    background-color: rgba(100, 255, 218, 0.05);
+}
+
+.section-subtitle {
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.card {
+    background-color: var(--secondary-dark);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(100, 255, 218, 0.08);
+    padding: 1.75rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    text-decoration: none;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-0.35rem);
+    border-color: rgba(100, 255, 218, 0.35);
+    box-shadow: 0 30px 60px -20px rgba(2, 12, 27, 0.7);
+}
+
+/* Ensure clickable cards have pointer cursor */
+a.card {
+    cursor: pointer;
+}
+
+/* Prevent text decoration on nested elements in clickable cards */
+a.card * {
+    text-decoration: none;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    text-align: left;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.stat-card p {
+    margin: 0;
+    color: var(--text-slate);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(100, 255, 218, 0.25);
+    color: var(--accent-color);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: rgba(100, 255, 218, 0.12);
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(100, 255, 218, 0), rgba(100, 255, 218, 0.35), rgba(100, 255, 218, 0));
+    margin: 3rem 0;
+}
+
+.lead {
+    font-size: 1.125rem;
+    color: var(--text-slate);
+    max-width: 56rem;
+}
+
+.quote {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1.25rem;
+    font-style: italic;
+    color: var(--text-light);
+}

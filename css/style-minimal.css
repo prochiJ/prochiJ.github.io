@@ -1,0 +1,367 @@
+/* Alternative Minimal Design System */
+/* Uses the same JSON data but creates a completely different UI */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Color Palette - Minimal Blue/Gray */
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --accent: #2563eb;
+  --accent-light: #3b82f6;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-hover: #2563eb;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg: #0f172a;
+    --secondary-bg: #1e293b;
+    --card-bg: #1e293b;
+    --accent: #60a5fa;
+    --accent-light: #93c5fd;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --border-hover: #60a5fa;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+/* Typography - Minimal */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Container - Narrower, centered */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header - Minimal sticky header */
+header {
+  background: var(--primary-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+header .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+header .nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  position: relative;
+}
+
+header .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.2s;
+}
+
+header .nav-links a:hover {
+  color: var(--accent);
+}
+
+header .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Card - Clean bordered style */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons - Minimal style */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+}
+
+/* Badge/Chip - Minimal pill */
+.badge, .chip {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Section spacing */
+section {
+  margin: 6rem 0;
+}
+
+/* Section subtitle */
+.section-subtitle {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* Lead text */
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Grid layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+/* Footer - Minimal */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0;
+  margin-top: 8rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* Project cards - Minimal */
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.project-card:hover h3 {
+  color: var(--accent);
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Blog cards - Minimal */
+.blog-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.blog-card:hover {
+  padding-left: 1rem;
+}
+
+.blog-card .date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.blog-card h3 {
+  margin: 0.5rem 0;
+  transition: color 0.2s;
+}
+
+.blog-card:hover h3 {
+  color: var(--accent);
+}
+
+/* Stats - Minimal number display */
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.stat-card p {
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* Hero section - Centered minimal */
+.hero {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero .lead {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  header .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  section {
+    margin: 4rem 0;
+  }
+  
+  .grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Divider - Minimal */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4rem 0;
+}

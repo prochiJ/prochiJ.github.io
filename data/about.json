@@ -1,0 +1,137 @@
+{
+  "hero": {
+    "subtitle": "Behind the craft",
+    "heading": "Engineering systems that feel thoughtful, grounded in research, and designed for longevity.",
+    "lead": "I'm Prachi Jindal — a builder who pairs analytical rigor with human-centered curiosity. My work spans embedded platforms, full-stack experiences, and machine intelligence, all anchored by a product mindset and love for cross-functional collaboration.",
+    "image": "images/profileimage.png",
+    "imageAlt": "Prachi Jindal portrait placeholder",
+    "stats": [
+      {
+        "value": "400+",
+        "description": "Hours mentoring classmates, teaching labs, and decoding complex topics through storytelling."
+      },
+      {
+        "value": "12",
+        "description": "Hackathons, research sprints, and innovation challenges tackled to keep curiosity sharp."
+      }
+    ],
+    "currently": "final-year Electrical Engineering student at IIT Delhi, exploring edge AI and human-computer interaction.",
+    "mission": "build trustworthy technology that amplifies human potential, especially in education, accessibility, and sustainability."
+  },
+  "experienceTimeline": [
+    {
+      "title": "Embedded Software Intern",
+      "company": "Texas Instruments",
+      "period": "May 2025 – July 2025",
+      "description": "Brought automation-first thinking to semiconductor validation labs by building modular test benches, data-driven filtering, and actionable reporting for device package variants.",
+      "highlights": [
+        "Designed a Python-led orchestration layer that reduced manual QA cycles by 45%.",
+        "Crafted embedded C utilities for on-device telemetry, improving diagnostics visibility.",
+        "Introduced documentation rituals and pair-programming sessions to scale onboarding."
+      ],
+      "tags": ["Embedded C", "Python", "Automation", "Data Viz"]
+    },
+    {
+      "title": "Teaching & Research Assistant",
+      "company": "IIT Delhi",
+      "period": "Aug 2024 – Present",
+      "description": "Guided signal processing cohorts, prototyped virtual lab experiences, and supported research on adaptive filtering and acoustic modeling.",
+      "highlights": [
+        "Architected a Next.js based virtual lab hub adopted by 80+ learners every semester.",
+        "Co-authored lab manuals emphasizing intuition, instrumentation, and debugging patterns.",
+        "Mentored student teams to ideate, scope, and deliver capstone prototypes within 12 weeks."
+      ],
+      "tags": ["Signal Processing", "Next.js", "Pedagogy"]
+    },
+    {
+      "title": "Product Engineering Fellow",
+      "company": "Student Innovation Lab",
+      "period": "Jan 2024 – Jun 2024",
+      "description": "Collaborated with interdisciplinary teams to build experimental experiences, from sustainability dashboards to community platforms.",
+      "highlights": [
+        "Deployed a full-stack analytics tool that visualized campus energy usage and actionable insights.",
+        "Facilitated design critique sessions, aligning engineering trade-offs with user research.",
+        "Introduced CI pipelines and code quality tooling to student teams for maintainability."
+      ],
+      "tags": ["React", "TypeScript", "CI/CD"]
+    }
+  ],
+  "skills": {
+    "subtitle": "Toolbox",
+    "heading": "Technologies and practices I reach for often",
+    "description": "I enjoy connecting low-level engineering with human-centered products. Here's what I lean on to make that happen.",
+    "categories": [
+      {
+        "title": "Systems & Embedded",
+        "items": [
+          "Embedded C/C++, FreeRTOS, TI-RTOS",
+          "Hardware bring-up, instrumentation, schematics",
+          "UART/SPI/I2C, CAN, edge telemetry"
+        ]
+      },
+      {
+        "title": "Data & Intelligence",
+        "items": [
+          "Python, NumPy, Pandas, Scikit-learn",
+          "Model deployment, LoRA fine-tuning, evaluation",
+          "Data storytelling, experimentation frameworks"
+        ]
+      },
+      {
+        "title": "Product Engineering",
+        "items": [
+          "Next.js, React, TypeScript, Tailwind CSS",
+          "Design systems, accessibility, inclusive design",
+          "DevOps basics, testing, documentation"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "subtitle": "Education",
+    "institution": "Indian Institute of Technology Delhi",
+    "degree": "B.Tech in Electrical Engineering",
+    "period": "2022 – 2026 (expected)",
+    "details": [
+      "Coursework focus: Digital Signal Processing, Control Systems, Data Structures, Machine Learning.",
+      "IEEE Robotics & Automation Society, Consulting Club, Women in STEM initiatives.",
+      "Dean's List 2023 & 2024 · Merit scholarship for academic excellence."
+    ]
+  },
+  
+  "values": {
+    "subtitle": "Working principles",
+    "heading": "How I show up for teams and products",
+    "principles": [
+      {
+        "title": "Systems thinking",
+        "description": "I map the problem space end-to-end, identifying leverage points and anticipating failure modes before they surface."
+      },
+      {
+        "title": "Empathy-driven craft",
+        "description": "I translate user needs into product requirements, ensuring delight and accessibility remain first-class citizens."
+      },
+      {
+        "title": "Bias for learning",
+        "description": "Every project is a chance to explore new tools, challenge assumptions, and document openly so others can grow too."
+      }
+    ]
+  },
+  "cta": {
+    "subtitle": "Next chapter",
+    "heading": "Curious about collaborating or mentoring?",
+    "description": "From research sprints to product incubation, I'm excited to partner on work that blends intellectual depth with practical shipping.",
+    "buttons": [
+      {
+        "text": "Book a coffee chat",
+        "link": "mailto:prachi.jindal9561@gmail.com",
+        "primary": true
+      },
+      {
+        "text": "Share opportunities",
+        "link": "contact.html",
+        "primary": false
+      }
+    ]
+  }
+}

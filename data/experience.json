@@ -1,0 +1,41 @@
+[
+  {
+    "year": "2026",
+    "company": "Stripe",
+    "role": "Software Engineer",
+    "description": "Joining Stripe's engineering team to build payment infrastructure that powers businesses worldwide.",
+    "highlights": [
+      "Building scalable distributed systems",
+      "Shipping customer-facing features",
+      "Contributing to payment platform reliability"
+    ],
+    "current": false,
+    "upcoming": true
+  },
+  {
+    "year": "2025",
+    "company": "Texas Instruments",
+    "role": "Embedded Software Intern",
+    "description": "Architected automation frameworks improving package validation and testbench reliability while mentoring peers on Python tooling best practices.",
+    "highlights": [
+      "Integrated data-driven filtering for multi-variant device testing.",
+      "Reduced diagnostic turnaround time with interactive dashboards.",
+      "Championed documentation that scaled onboarding efficiency."
+    ],
+    "current": false,
+    "upcoming": false
+  },
+  {
+    "year": "2024",
+    "company": "IIT Delhi",
+    "role": "Teaching & Research Assistant",
+    "description": "Supported signal processing labs, guided student research, and co-created virtual lab experiences to democratize complex concepts.",
+    "highlights": [
+      "Led hands-on lab sessions for 80+ students with modern tooling.",
+      "Developed reproducible experiment templates adopted across cohorts.",
+      "Contributed to curriculum enhancements around computational thinking."
+    ],
+    "current": false,
+    "upcoming": false
+  }
+]
