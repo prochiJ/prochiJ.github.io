@@ -605,7 +605,7 @@ class CrazyContentLoader {
 
       return `
                 <li style="margin-bottom: 0.75rem;">
-                  <a href="${this.adjustLink(link.url)}" style="display: flex; align-items: center; gap: 0.5rem;">
+                  <a href="${this.adjustPageLink(link.url)}" style="display: flex; align-items: center; gap: 0.5rem;">
                     <span></span>
                     ${link.text}
                   </a>
@@ -622,7 +622,7 @@ class CrazyContentLoader {
           <ul style="list-style: none; padding: 0;">
             ${this.footerData.connect.links.map(link => `
               <li style="margin-bottom: 0.75rem;">
-                <a href="${this.adjustLink(link.url)}" ${link.external ? 'target="_blank"' : ''} style="display: flex; align-items: center; gap: 0.5rem;">
+                <a href="${this.adjustPageLink(link.url)}" ${link.external ? 'target="_blank"' : ''} style="display: flex; align-items: center; gap: 0.5rem;">
                   <span></span>
                   ${link.text}
                 </a>
@@ -644,7 +644,7 @@ class CrazyContentLoader {
 
       return `
                 <li style="margin-bottom: 0.75rem;">
-                  <a href="${this.adjustLink(link.url)}" style="display: flex; align-items: center; gap: 0.5rem;">
+                  <a href="${this.adjustRootLink(link.url)}" style="display: flex; align-items: center; gap: 0.5rem;">
                     <span></span>
                     ${link.text}
                   </a>
@@ -658,7 +658,7 @@ class CrazyContentLoader {
       <div style="text-align: center; padding: 1rem 0;">
         <p style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
           <span></span>
-          ${this.footerData.copyright.text}
+          ${this.footerData.copyright}
           <span></span>
         </p>
       </div>

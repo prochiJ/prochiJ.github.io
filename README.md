@@ -57,12 +57,12 @@
 │    (11 JSON Files)      │
 └───────────┬─────────────┘
             │
-    ┌───────┴───────┐
-    │               │
-┌───▼────┐    ┌────▼────┐
-│Original│    │ Minimal │
-│ Design │    │ Design  │
-└────────┘    └─────────┘
+    ┌───────┼───────┐
+    │       │       │
+┌───▼────┐┌─▼─────┐┌▼──────┐
+│Original││Minimal││ Crazy │
+│ Design ││Design ││Design │
+└────────┘└───────┘└───────┘
 ```
 
 **Core Principle**: Separation of concerns
@@ -94,8 +94,9 @@
    ```
 
 3. **Access Designs**:
-   - Original Design: http://localhost:8000/index.html
-   - Minimal Design: http://localhost:8000/index-minimal.html
+   - Original Design: http://localhost:8000/
+   - Minimal Design: http://localhost:8000/minimal/
+   - Crazy Design: http://localhost:8000/crazy/
 
 ### Update Content
 
@@ -196,32 +197,40 @@ All content is stored in `/data/` directory across 11 specialized JSON files:
 ### Available Designs
 
 #### 1. Original Design
-- **Files**: `index.html`, `about.html`, `projects.html`, `contact.html`, `pages/blogs.html`
+- **URL**: `/`
+- **Files**: `index.html`, `about/index.html`, `projects/index.html`, etc.
 - **CSS**: `css/style.css`
 - **Loader**: `js/content-loader.js`
 - **Style**: Dark theme, gradient accents, Tailwind CSS utilities
 - **Features**: Multi-column layouts, card shadows, fade-in animations
 
 #### 2. Minimal Design
-- **Files**: `index-minimal.html`, `pages/about-minimal.html`, etc.
+- **URL**: `/minimal/`
+- **Files**: `minimal/index.html`, `minimal/about/index.html`, etc.
 - **CSS**: `css/style-minimal.css`
 - **Loader**: `js/content-loader-minimal.js`
 - **Style**: Clean, centered (900px), light/dark mode auto-detect
 - **Features**: Bordered cards, subtle animations, timeline layout
 
+#### 3. Crazy Design
+- **URL**: `/crazy/`
+- **Files**: `crazy/index.html`, `crazy/about/index.html`, etc.
+- **CSS**: `css/style-crazy.css`
+- **Loader**: `js/content-loader-crazy.js`
+- **Style**: Vibrant, high-contrast, bold typography, glassmorphism
+- **Features**: Floating elements, neon accents, dynamic hover effects
+
 ### Design Comparison
 
-| Aspect | Original | Minimal |
-|--------|----------|---------|
-| **Max Width** | 1400px | 900px |
-| **Layout** | Wide, multi-column | Narrow, centered |
-| **Color Scheme** | Dark with gradients | Auto light/dark |
-| **Typography** | Inter, system fonts | Space Grotesk, JetBrains Mono |
-| **Cards** | Shadowed, gradient | Bordered, clean |
-| **Navigation** | Full navbar with gradients | Minimal sticky header |
-| **Experience** | Grid of cards | Timeline with dots |
-| **Footer** | Multi-column with gradients | Simple centered |
-| **Animations** | Fade-in on scroll | Hover effects |
+| Aspect | Original | Minimal | Crazy |
+|--------|----------|---------|-------|
+| **Max Width** | 1400px | 900px | 100% (Fluid) |
+| **Layout** | Wide, multi-column | Narrow, centered | Asymmetric, dynamic |
+| **Color Scheme** | Dark with gradients | Auto light/dark | Neon/Dark/Vibrant |
+| **Typography** | Inter, system fonts | Space Grotesk, JetBrains Mono | Syne, Outfit |
+| **Cards** | Shadowed, gradient | Bordered, clean | Glassmorphic, floating |
+| **Navigation** | Full navbar | Minimal sticky header | Bottom floating bar |
+| **Experience** | Grid of cards | Timeline with dots | Interactive timeline |
 
 ---
 
@@ -264,7 +273,7 @@ All content is stored in `/data/` directory across 11 specialized JSON files:
   "excerpt": "Short description",
   "date": "Dec 15, 2024",
   "tags": ["JavaScript", "Performance"],
-  "link": "pages/blog4.html"
+  "link": "blogs/blog4/"
 }
 ```
 
@@ -297,39 +306,45 @@ All content is stored in `/data/` directory across 11 specialized JSON files:
 
 ## Development Guide
 
-### Adding a New Design (Design #3)
+### Adding a New Design (Design #4)
 
-1. **Create CSS File**:
+1. **Create Directory**:
+   ```bash
+   mkdir corporate
+   ```
+
+2. **Create CSS File**:
    ```bash
    cp css/style-minimal.css css/style-corporate.css
    # Customize your styles
    ```
 
-2. **Create Loader**:
+3. **Create Loader**:
    ```bash
    cp js/content-loader-minimal.js js/content-loader-corporate.js
    # Modify HTML generation logic
    ```
 
-3. **Create HTML Files**:
+4. **Create HTML Files**:
    ```bash
    # Root level
-   cp index-minimal.html index-corporate.html
+   cp minimal/index.html corporate/index.html
    
    # Pages directory
-   cp pages/about-minimal.html pages/about-corporate.html
+   mkdir corporate/about
+   cp minimal/about/index.html corporate/about/index.html
    # ... repeat for all pages
    ```
 
-4. **Update References**:
+5. **Update References**:
    - Update `<link>` tags to point to new CSS
    - Update `<script>` tags to point to new loader
    - Update navigation links to new HTML files
 
-5. **Test**:
+6. **Test**:
    ```bash
    python3 -m http.server 8000
-   # Visit http://localhost:8000/index-corporate.html
+   # Visit http://localhost:8000/corporate/
    ```
 
 ### Content Loader Architecture
@@ -345,14 +360,19 @@ class ContentLoader {
     // ... all 11 data files
     
     // Path detection
-    this.inPagesDir = window.location.pathname.includes('/pages/');
-    this.basePath = this.inPagesDir ? '../' : './';
+    const pathSegments = window.location.pathname.split('/').filter(p => p && !p.endsWith('.html'));
+    this.inPagesDir = pathSegments.length >= 2; // e.g. /minimal/about/
+    
+    // Calculate base path for data fetching
+    // If in /minimal/ -> ../data/
+    // If in /minimal/about/ -> ../../data/
+    this.basePath = this.inPagesDir ? '../../data/' : '../data/';
   }
 
   async init() {
     // Load all JSON files in parallel
     const [...data] = await Promise.all([
-      fetch(`${this.basePath}data/profile.json`).then(r => r.json()),
+      fetch(`${this.basePath}profile.json`).then(r => r.json()),
       // ... all files
     ]);
     
@@ -360,33 +380,9 @@ class ContentLoader {
     this.profileData = data[0];
     // ...
   }
-
-  // Page loaders
-  loadHomePage() { /* ... */ }
-  loadAboutPage() { /* ... */ }
-  loadProjectsPage() { /* ... */ }
-  loadBlogsPage() { /* ... */ }
-  loadContactPage() { /* ... */ }
   
-  // Component loaders
-  loadFooter() { /* ... */ }
-  updateProfile() { /* ... */ }
+  // ... page loaders
 }
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', async () => {
-  const loader = new ContentLoader();
-  await loader.init();
-  
-  // Detect page and load appropriate content
-  const path = window.location.pathname;
-  if (path.includes('index')) {
-    loader.loadHomePage();
-  } else if (path.includes('about')) {
-    loader.loadAboutPage();
-  }
-  // ... etc
-});
 ```
 
 ### Path Resolution
@@ -394,13 +390,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 The loaders automatically detect directory depth and adjust paths:
 
 ```javascript
-// In root directory (index.html)
-this.basePath = './';
-// Links to: ./data/profile.json, ./assets/images/...
+// In theme root (e.g. /minimal/)
+this.basePath = '../data/';
+// Links to: ../data/profile.json
 
-// In pages directory (pages/about.html)
-this.basePath = '../';
-// Links to: ../data/profile.json, ../assets/images/...
+// In subpage (e.g. /minimal/about/)
+this.basePath = '../../data/';
+// Links to: ../../data/profile.json
 ```
 
 ### Debugging
@@ -429,29 +425,35 @@ Check browser console for:
 ```
 Portfolio/
 ├── index.html                  # Original design homepage
-├── index-minimal.html          # Minimal design homepage
-├── about.html                  # Original about page
-├── projects.html               # Original projects page
-├── contact.html                # Original contact page
+├── about/                      # Original about page
+├── projects/                   # Original projects page
+├── contact/                    # Original contact page
+├── blogs/                      # Original blogs listing
 │
-├── pages/                      # Subpages directory
-│   ├── about-minimal.html      # Minimal about page
-│   ├── projects-minimal.html   # Minimal projects page
-│   ├── blogs.html              # Original blogs listing
-│   ├── blogs-minimal.html      # Minimal blogs listing
-│   ├── contact-minimal.html    # Minimal contact page
-│   ├── blog1.html              # Individual blog posts
-│   ├── blog2.html
-│   └── blog3.html
+├── minimal/                    # Minimal Design Theme
+│   ├── index.html
+│   ├── about/
+│   ├── projects/
+│   ├── blogs/
+│   └── contact/
+│
+├── crazy/                      # Crazy Design Theme
+│   ├── index.html
+│   ├── about/
+│   ├── projects/
+│   ├── blogs/
+│   └── contact/
 │
 ├── css/                        # Stylesheets
 │   ├── style.css               # Original design styles
-│   └── style-minimal.css       # Minimal design styles
+│   ├── style-minimal.css       # Minimal design styles
+│   └── style-crazy.css         # Crazy design styles
 │
 ├── js/                         # JavaScript
 │   ├── script.js               # Original design utilities
 │   ├── content-loader.js       # Original design loader
-│   └── content-loader-minimal.js  # Minimal design loader
+│   ├── content-loader-minimal.js  # Minimal design loader
+│   └── content-loader-crazy.js    # Crazy design loader
 │
 ├── data/                       # JSON data files
 │   ├── profile.json            # Personal information
